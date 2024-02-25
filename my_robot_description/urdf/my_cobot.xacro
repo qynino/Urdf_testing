@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot name="my_cobot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find my_robot_description)/urdf/my_cobot.joints_links.xacro" />
+  <xacro:include filename="$(find my_robot_description)/urdf/my_cobot.transmission.xacro" />
+  <xacro:include filename="$(find my_robot_description)/urdf/my_cobot.gazebo_base.xacro" />
+  <xacro:include filename="$(find my_robot_description)/urdf/my_cobot.ros2_control.xacro"/>
+  <!-- <xacro:include filename="$(find my_robot_description)/urdf/my_cobot.cartesian.xacro"/> -->
+</robot>

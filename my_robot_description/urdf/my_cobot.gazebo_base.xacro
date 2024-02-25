@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <gazebo reference="base_link">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    
+    <gazebo reference="link1">
+        <material>Gazebo/Blue</material>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="link2">
+        <material>Gazebo/Grey</material>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="link3">
+        <material>Gazebo/Green</material>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="link4">
+        <material>Gazebo/Brown</material>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="link5">
+        <material>Gazebo/Yellow</material>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="link6">
+        <material>Gazebo/White</material>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="link7">
+        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    
+    <gazebo reference="sensor_link_joint">
+        <provideFeedback>true</provideFeedback>
+    </gazebo>
+
+    <gazebo>
+        <plugin name="wrench" filename="libgazebo_ros_ft_sensor.so">
+            <updateRate>100</updateRate>
+            <topicName>ft_sensor_wrench</topicName>
+            <jointName>sensor_link_joint</jointName>
+            <body_name>link7</body_name>
+            <noise>
+                <type>gaussian</type>
+                <mean>0.0</mean>
+                <stddev>0.003</stddev>
+            </noise>
+        </plugin>
+    </gazebo>
+
+</robot>
